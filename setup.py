@@ -1,14 +1,13 @@
 from setuptools import setup, find_packages
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 setup(
     name='tools',
     version='0.1',
     packages=find_packages(),
-    install_requires=[
-        # Add any dependencies required by your tools
-        'requests',
-        # other dependencies...
-    ],
+    install_requires=requirements,
     author='LAPAI',
     author_email='sepai.iclr@gmail.com',
     description='Many tools',
